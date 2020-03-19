@@ -8,7 +8,7 @@ namespace coolOrange_CandidateChallenge
 {
     public class PalindromeChecker
     {
-        public static bool isPalindrome(String s)
+        public static bool IsPalindrome(string s)
         {
             // TODO
             return false;

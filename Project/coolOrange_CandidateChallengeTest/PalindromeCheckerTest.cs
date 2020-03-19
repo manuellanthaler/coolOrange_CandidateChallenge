@@ -1,69 +1,41 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using coolOrange_CandidateChallenge;
+﻿using coolOrange_CandidateChallenge;
+using NUnit.Framework;
 
 namespace coolOrange_CandidateChallengeTest
 {
-	[TestClass]
+	[TestFixture]
 	public class PalindromeCheckerTest
 	{
-		[TestMethod]
-		public void testIsPalindrome_True00()
+		[Test]
+		public void IsPalindrome_passing_empty_returns_true()
 		{
-			Assert.IsTrue(PalindromeChecker.isPalindrome(""));
+			Assert.IsTrue(PalindromeChecker.IsPalindrome(""));
 		}
 
-		[TestMethod]
-		public void testIsPalindrome_True01()
+		[Test]
+		public void IsPalindrome_passing_single_character_returns_true()
 		{
-			Assert.IsTrue(PalindromeChecker.isPalindrome("a"));
+			Assert.IsTrue(PalindromeChecker.IsPalindrome("a"));
 		}
 
-		[TestMethod]
-		public void testIsPalindrome_True02()
+		[Test]
+		[TestCase("aa")]
+		[TestCase("aaa")]
+		[TestCase("radar")]
+		[TestCase("rats live on no evil star")]
+		public void IsPalindrome_passing_a_palindrome_phrase_returns_true(string phrase)
 		{
-			Assert.IsTrue(PalindromeChecker.isPalindrome("aa"));
+			Assert.IsTrue(PalindromeChecker.IsPalindrome(phrase));
 		}
 
-		[TestMethod]
-		public void testIsPalindrome_True03()
+		[Test]
+		[TestCase("ab")]
+		[TestCase("ab ")]
+		[TestCase("ab a")]
+		[TestCase("abcab")]
+		public void IsPalindrome_passing_no_palindrome_phrase_returns_false(string input)
 		{
-			Assert.IsTrue(PalindromeChecker.isPalindrome("aaa"));
-		}
-
-		[TestMethod]
-		public void testIsPalindrome_True04()
-		{
-			Assert.IsTrue(PalindromeChecker.isPalindrome("radar"));
-		}
-
-		[TestMethod]
-		public void testIsPalindrome_True05()
-		{
-			Assert.IsTrue(PalindromeChecker.isPalindrome("rats live on no evil star"));
-		}
-
-		[TestMethod]
-		public void testIsPalindrome_False00()
-		{
-			Assert.IsFalse(PalindromeChecker.isPalindrome("ab"));
-		}
-
-		[TestMethod]
-		public void testIsPalindrome_False01()
-		{
-			Assert.IsFalse(PalindromeChecker.isPalindrome("ab "));
-		}
-
-		[TestMethod]
-		public void testIsPalindrome_False02()
-		{
-			Assert.IsFalse(PalindromeChecker.isPalindrome("ab a"));
-		}
-
-		[TestMethod]
-		public void testIsPalindrome_False03()
-		{
-			Assert.IsFalse(PalindromeChecker.isPalindrome("abcab"));
+			Assert.IsFalse(PalindromeChecker.IsPalindrome(input));
 		}
 	}
 }
