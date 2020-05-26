@@ -1,1 +1,0 @@
-# coolOrange_CandidateChallenge

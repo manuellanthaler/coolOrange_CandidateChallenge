@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace coolOrange_CandidateChallenge
 {
-    public class ArrayUtility
+    public class Array
     {
         // Todo
     }
