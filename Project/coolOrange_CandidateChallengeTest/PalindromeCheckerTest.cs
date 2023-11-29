@@ -33,9 +33,9 @@ namespace coolOrange_CandidateChallengeTest
 		[TestCase("ab ")]
 		[TestCase("ab a")]
 		[TestCase("abcab")]
-		public void IsPalindrome_passing_no_palindrome_phrase_returns_false(string input)
+		public void IsPalindrome_passing_no_palindrome_phrase_returns_false(string phrase)
 		{
-			Assert.IsFalse(PalindromeChecker.IsPalindrome(input));
+			Assert.IsFalse(PalindromeChecker.IsPalindrome(phrase));
 		}
 	}
 }
