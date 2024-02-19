@@ -31,12 +31,12 @@ namespace coolOrange_CandidateChallenge
 			throw new NotImplementedException();
 		}
 
-		public static int[][] CreateRandomMatrix(int rows, int columns, int minValue, int maxValue)
+		public static int[,] CreateRandomMatrix(int rows, int columns, int minValue, int maxValue)
 		{
 			throw new NotImplementedException();
 		}
 
-		public static int[][] CopyArray(int[] array)
+		public static int[,] CopyArray(int[] array)
 		{
 			throw new NotImplementedException();
 		}
